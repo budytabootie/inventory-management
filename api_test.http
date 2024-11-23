@@ -1,0 +1,115 @@
+### Products Endpoints
+
+# Get all products
+GET http://localhost:8080/products
+Accept: application/json
+
+###
+
+# Create a new product
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Product A",
+  "description": "This is Product A",
+  "price": 150000,
+  "category": "Electronics"
+}
+
+###
+
+# Update a product
+PUT http://localhost:8080/products/1
+Content-Type: application/json
+
+{
+  "name": "Updated Product A",
+  "description": "Updated description for Product A",
+  "price": 160000,
+  "category": "Gadgets"
+}
+
+###
+
+# Delete a product
+DELETE http://localhost:8080/products/1
+
+###
+
+### Inventory Endpoints
+
+# Test Get All Inventory
+GET http://localhost:8080/inventory
+Accept: application/json
+
+###
+
+# Test Create Inventory
+POST http://localhost:8080/inventory
+Content-Type: application/json
+
+{
+  "product_id": 2,
+  "quantity": 100,
+  "location": "Warehouse A"
+}
+
+###
+
+# Test Update Inventory
+PUT http://localhost:8080/inventory
+Content-Type: application/json
+
+{
+  "product_id": 2,
+  "quantity": 150,
+  "location": "Warehouse B"
+}
+
+###
+
+# Test Delete Inventory
+DELETE http://localhost:8080/inventory/2
+Accept: application/json
+
+
+### Orders Endpoints
+
+# Create a new order
+POST http://localhost:8080/orders
+Content-Type: application/json
+
+{
+  "product_id": 2,
+  "quantity": 2,
+  "date": "2024-11-23"
+}
+
+###
+
+# Get order by ID
+GET http://localhost:8080/orders/
+Accept: application/json
+
+### File Upload and Download Endpoints
+
+### Upload product image to product with ID
+POST http://localhost:8080/products/2/image
+Content-Type: multipart/form-data; boundary=------------------------boundary
+
+--------------------------boundary
+Content-Disposition: form-data; name="file"; filename="product_image.jpg"
+Content-Type: image/jpeg
+
+< ./product_image.jpg
+--------------------------boundary--
+
+
+
+
+###
+
+# Download product image
+GET http://localhost:8080/products/2/image
+Accept: application/json
