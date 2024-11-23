@@ -90,13 +90,12 @@ Aplikasi ini ditujukan untuk administrator atau staf yang bertanggung jawab atas
 
 ### 1. Menjalankan Server
 
-Setelah mengikuti langkah-langkah di bagian Instruksi Pengaturan, Anda bisa mulai menjalankan server backend menggunakan Golang.
-	* __Jalankan Server__  : Untuk memulai server, gunakan perintah berikut di terminal:
-
-	```bash
-	go run main.go
-	```
-	Server akan berjalan di http://localhost:8080.
+Setelah mengikuti langkah-langkah di bagian Instruksi Pengaturan, Anda bisa mulai menjalankan server backend menggunakan Golang. 
+* __Jalankan Server__  : Untuk memulai server, gunakan perintah berikut di terminal:
+```bash
+go run main.go
+```
+Server akan berjalan di http://localhost:8080.
 
 ### 2. Mengakses Endpoint API
 
